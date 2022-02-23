@@ -1,8 +1,7 @@
 // timer start
 const showTimeLess = () => {
-    function addZero  (x) {return ((x < 10)? '0' : '') + x}
+    const addZero =  (x) => {return ((x < 10)? '0' : '') + x}
     let timeLeft = Math.round (.001 * (sessionStorage.getItem ('timeset') - performance.now ()));
-    // console.log(timeLeft);
     document.getElementById ('my_timer').textContent = [addZero(Math.floor (timeLeft / 3600)), addZero(Math.floor ((timeLeft / 60) % 60)), addZero  (timeLeft % 60)].join (':');
     if (timeLeft) setTimeout (showTimeLess, 345);
 }
@@ -19,18 +18,16 @@ actualData.append(output);
 //  actual date end
 
 // tel mask start
-inp.onclick = function() {
+inp.onclick = () => {
     inp.value = "+38(0";
 }
-
-var old = 0;
-
-inp.onkeydown = function() {
+let old = 0;
+inp.onkeydown = () => {
     let curLen = inp.value.length;
     if (curLen < old){
         old--;
         return;
-        }
+    }
     if (curLen == 7) inp.value = inp.value + ")";
     if (curLen == 7) inp.value = inp.value + "-";
     if (curLen == 12) inp.value = inp.value + "-"; 
