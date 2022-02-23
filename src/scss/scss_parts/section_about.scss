@@ -93,3 +93,16 @@
         margin: 0 auto;
     }
 }
+@media screen and(max-width:1175px){
+    .about{
+        margin: 0;
+    }
+    .about-content {
+        &__item{
+            margin: 0 auto;
+        }
+        &__item-img {
+            height: auto;
+		}
+    }
+}

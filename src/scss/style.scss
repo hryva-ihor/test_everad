@@ -28,7 +28,9 @@ $maxWidth: 1140;
     }
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Roboto', sans-serif;
 }

@@ -16,6 +16,7 @@
     left: 0;
     bottom: 0;
     max-height: 174px;
+    min-height: 80px;
     width: 100%;
     object-fit: cover;
     z-index: -1;
@@ -78,14 +79,14 @@
 }
 @media screen and(min-width:767px) {
     .results-block {
-        padding-bottom: 200px;
+        padding-bottom: 180px;
         align-items: center;
     }
 }
 @media screen and(max-width:560px) {
     .results-block {
             &__text{
-                padding: 25px 70px 25px 20px;
+                padding: 45px 70px 45px 20px;
                 p{
                     margin-bottom: 14px;
                     &:last-child{
@@ -93,5 +94,17 @@
                     }
                 }
             }
+    }
+}
+@media screen and(max-width:1120px) {
+    .results-block__img {
+        img{
+            width: 100%;
+            height: 100%;     
+            object-fit: cover;
+        }
+        flex: 1 1 auto;
+        max-width: 500px;  
+
     }
 }
