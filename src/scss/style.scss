@@ -1,0 +1,57 @@
+//  start nuull style
+@import "scss_parts/nullstyle.scss";
+//end null style
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    font-display: swap;
+    src: url("../fonts/Roboto-Bold.woff") format("woff"),url("../fonts/Roboto-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    font-display: swap;
+    src: url("../fonts/Roboto-Regular.woff") format("woff"),url("../fonts/Roboto-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+$maxWidth: 1140;
+@mixin adaptiv-font($mobSize, $pcSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    @media screen and(max-width:1140px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+    @media screen and(min-width: 1140px) {
+        font-size: $pcSize + px;
+    }
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.container.container-padding{
+    padding: 0 10px
+}
+
+@media screen and(min-width:767px) {
+    .container.container-padding{
+        padding: 0 30px
+    }
+}
+
+//  start header style
+@import "scss_parts/header.scss";
+//end header style
+//  start aboute style
+@import "scss_parts/section_about.scss";
+//end aboute style
+//  start aboute style
+@import "scss_parts/section_results.scss";
+//end aboute style
